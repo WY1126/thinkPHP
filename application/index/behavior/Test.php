@@ -8,7 +8,6 @@ class Test
 {
     public function run($params)
     {
-        echo $params."钩子执行了方法"."<br>";
-
+//        echo $params."钩子执行了方法"."<br>";
     }
 }
