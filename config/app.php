@@ -19,9 +19,9 @@ return [
     // 应用地址
     'app_host'               => '',
     // 应用调试模式
-    'app_debug'              => false,
-    // 应用Trace
-    'app_trace'              => false,
+    'app_debug'              => true,
+    // 应用Trace  //我们需要调试 SQL 是否正确，
+    'app_trace'              => true,
     // 是否支持多模块
     'app_multi_module'       => true,
     // 入口自动绑定模块
@@ -119,7 +119,7 @@ return [
     // 是否开启请求缓存 true自动缓存 支持设置请求缓存规则
     'request_cache'          => false,
     // 请求缓存有效期
-    'request_cache_expire'   => null,
+    'request_cache_expire'   =>3600,
     // 全局请求缓存排除规则
     'request_cache_except'   => [],
     // 是否开启路由缓存

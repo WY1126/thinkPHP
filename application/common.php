@@ -10,3 +10,9 @@
 // +----------------------------------------------------------------------
 
 // 应用公共文件
+use think\Facade;
+//use think\Hook;
+//use think\App;
+//$hook = new Hook(new App());
+//$hook->portal('portal');
+Facade::bind('app\facade\Test','app\common\Test');

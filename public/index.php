@@ -17,5 +17,6 @@ require __DIR__ . '/../thinkphp/base.php';
 
 // 支持事先使用静态方法设置Request对象和Config对象
 
-// 执行应用并响应
-Container::get('app')->run()->send();
+                  //bind('test')绑定单一模块   bind('test/Abc')单一模块单一控制器
+// 执行应用并响应  Container::get('app')->bind('test/Abc')->run()->send()
+Container::get('app')->run()->send();    
