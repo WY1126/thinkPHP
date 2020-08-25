@@ -7,12 +7,15 @@ use think\model\concern\SoftDelete;
 class users extends Model
 {
     //开启自动时间戳
-    protected  $autoWriteTimestamp='datetime';
+//    protected  $autoWriteTimestamp='datetime';
     // 在模型定义中，可以设置其它的数据表
     // protected $table='tp_one';
     public static function init()
     {
-        echo "初始化！";
+        //event模型事件
+        self::event('before_update', function ($query) {
+        echo '准备开始插入数据...';
+    });
     }
     public  function getSexAttr($value)
     {
@@ -34,14 +37,14 @@ class users extends Model
             $query->order($data['sort']);
         }
     }
-    //转换数值类型
-    protected $type = [
-        'create_time'   =>      'datetime:Y-m-d'
-    ];
+    //转换数值类型    开启后再添加datetime型数据出错
+//    protected $type = [
+//        'create_time'   =>      'datetime:Y-m-d'
+//    ];
     //数据自动补充
-    protected  $insert=['age' => 0];
-    protected  $auto=[];
-    protected  $update=[];
+//    protected  $insert=['age' => 0];
+//    protected  $auto=[];
+//    protected  $update=[];
     //scope模型查询范围
     public function scopeSexWuman($query)
     {

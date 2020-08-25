@@ -2,11 +2,34 @@
 namespace app\test\controller;
 
 use app\model\users;
+use Cassandra\Date;
 use think\Controller;
 use think\Db;
 
 class  Modeltest2 extends Controller
 {
+
+    public function update()
+    {
+//        $today = date("Y-m-d H:i:s");
+//        dump($today);
+//        $t =new date('Y-m-d H:i:s');
+//        return $t;
+        $user=new users();
+//        $data=[
+//          'name'        =>      '哥尔·D·罗杰',
+//          'age'         =>      54,
+//          'sex'         =>      '男',
+//          'create_time' =>      $today,
+//        ];
+        $user->update([
+            'id'          =>      25,
+            'name'        =>      '蒙太奇',
+            'age'         =>      54,
+            'sex'         =>      '男',
+            'create_time' => date('Y-m-d H:i:s')
+        ]);
+    }
 
     public function queryScope()
     {

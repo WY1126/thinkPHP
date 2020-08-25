@@ -9,26 +9,27 @@ class Modeltest extends Controller
     public function index()
     {
         $users=new users;
-        // $users->name         =       "雷利";
-        // $users->age          =       78;
-        // $users->sex          =       '男';
-        // $users->create_time  =       Date('Y-m-d  H:i:s');
-        //    $dataAll=[
-        //         [
-        //             'name'=>'娜美',
-        //             'age'=>19,
-        //             'sex'=>'女',
-        //             'create_time'=>Date('Y-m-d H:i:s')  
-        //         ],
-        //         [
-        //             'name'=>'罗宾',
-        //             'age'=>20,
-        //             'sex'=>'女',
-        //             'create_time'=>Date('Y-m-d H:i:s')  
-        //         ]
-        //         ];
-        //saveall()添加多条数据。
-        //     print_r($users->saveAll($dataAll));
+//         $users->name         =       "雷利";
+//         $users->age          =       78;
+//         $users->sex          =       '男';
+//         $users->create_time  =       Date('Y-m-d  H:i:s');
+            $dataAll=[
+                 [
+                     'name'=>'娜美',
+                     'age'=>19,
+                     'sex'=>'女',
+                     'create_time'=>Date('Y-m-d H:i:s')
+                 ],
+                 [
+                     'name'=>'罗宾',
+                     'age'=>20,
+                     'sex'=>'女',
+                     'create_time'=>Date('Y-m-d H:i:s')
+                 ]
+                 ];
+//        saveall()添加多条数据。
+             print_r($users->saveAll($dataAll));
+//        return $users->select();
 
         //get获取数据，delete删除，destroy删除
         // $data=Users::get(16);
@@ -49,9 +50,9 @@ class Modeltest extends Controller
         // 模型获取器和修改器
 //        $data=users::get(8);
 //        return $data->sex;
-        $data=users::get(8);
-        $data->name="麦克阿瑟";
-        $data->save();
+//        $data=users::get(8);
+//        $data->name="麦克阿瑟";
+//        $data->save();
         // return json(users::select());
     } 
     
